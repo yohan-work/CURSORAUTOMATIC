@@ -1,4 +1,4 @@
 #!/bin/bash 
 git add . 
-git commit -m "CURSOR AUTO COMMIT" 
+git commit -m "chore : auto PR SYS" 
 git push origin main
