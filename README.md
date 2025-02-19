@@ -1,0 +1,2 @@
+# CURSORAUTOMATIC
+use Message
