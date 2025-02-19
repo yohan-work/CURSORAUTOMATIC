@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zzz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="slack-container">
+
+    <!-- Sidebar -->
+    <aside class="slack-sidebar">
+      <div class="slack-team-header">
+        <span class="team-name">My Workspace</span>
+        <button class="add-channel-btn">+</button>
+      </div>
+
+      <div class="slack-channels">
+        <div class="channel-category">
+          <span>Channels</span>
+          <button class="add-channel-btn">+</button>
+        </div>
+        <ul class="channel-list">
+          <li><a href="#" data-channel="general"># general</a></li>
+          <li><a href="#" data-channel="random"># random</a></li>
+          <li><a href="#" data-channel="project-alpha"># project-alpha</a></li>
+          <li><a href="#" data-channel="gpt"># gpt</a></li>
+        </ul>
+      </div>
+
+      <div class="slack-direct-messages">
+        <div class="dm-category">
+          <span>Direct Messages</span>
+          <button class="add-dm-btn">+</button>
+        </div>
+        <ul class="dm-list">
+          <li><a href="#" data-user="user1">User 1</a></li>
+          <li><a href="#" data-user="user2">User 2</a></li>
+          <li><a href="#" data-user="user3">User 3</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="slack-main">
+      <header class="slack-header">
+        <div class="channel-title"># general</div>
+      </header>
+
+      <div class="slack-messages" id="slack-messages">
+        <div class="message">
+          <span class="message-user">User1:</span>
+          <span class="message-text">Hello, world!</span>
+        </div>
+        <div class="message">
+          <span class="message-user">User2:</span>
+          <span class="message-text">Hi there!</span>
+        </div>
+      </div>
+
+      <footer class="slack-footer">
+        <input type="text" id="message-input" placeholder="Message #general">
+        <button id="send-button">Send</button>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

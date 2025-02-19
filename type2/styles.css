@@ -1,0 +1,312 @@
+/* 기본 스타일 (PC) */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+.slack-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+.slack-sidebar {
+  width: 250px;
+  background-color: #3f0f40;
+  color: white;
+  padding: 20px;
+}
+
+.slack-team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.add-channel-btn, .add-dm-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.channel-category, .dm-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.channel-list, .dm-list {
+  list-style: none;
+  padding: 0;
+}
+
+.channel-list li, .dm-list li {
+  margin-bottom: 8px;
+}
+
+.channel-list a, .dm-list a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.channel-list a:hover, .dm-list a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Styles */
+.slack-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.slack-header {
+  background-color: #fff;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.channel-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.channel-details {
+  display: flex;
+  gap: 12px;
+  color: #616061;
+  font-size: 0.9em;
+}
+
+.member-count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.slack-messages {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  gap: 12px;
+  padding: 8px 20px;
+  margin: 0;
+}
+
+.message:hover {
+  background-color: #f8f8f8;
+}
+
+.message-profile {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.message-content {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.message-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.message-user {
+  font-weight: bold;
+  color: #1d1c1d;
+}
+
+.message-time {
+  color: #616061;
+  font-size: 0.8em;
+}
+
+.message-text {
+  color: #1d1c1d;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* Footer Styles */
+.slack-footer {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#send-button {
+  background-color: #4a154b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 모바일 메뉴 토글 버튼 (기본적으로 숨김) */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* 모바일 사이드바 관련 스타일 추가 */
+.mobile-sidebar-header {
+    display: none;
+}
+
+/* 태블릿 (768px ~ 1024px) */
+@media screen and (max-width: 1024px) {
+  .slack-sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .slack-messages {
+    padding: 15px;
+  }
+
+  .slack-footer {
+    padding: 15px;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 768px) {
+  .mobile-sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+  .mobile-close-btn {
+	position: absolute;
+	top: 7px;
+	right: 16px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .slack-container {
+    flex-direction: column;
+  }
+
+  .slack-sidebar {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 30px);
+  }
+
+  .slack-sidebar.show {
+	display: block;
+  }
+
+  /* .slack-main {
+    margin-top: 50px;
+  } */
+
+  .slack-header {
+    padding: 12px;
+  }
+
+  .slack-messages {
+    padding: 8px 12px;
+  }
+
+  .slack-footer {
+    padding: 10px;
+  }
+
+  #message-input {
+    font-size: 16px;
+  }
+
+  .message {
+    padding: 8px 12px;
+  }
+  
+  .channel-details {
+    flex-wrap: wrap;
+  }
+}
+
+/* 작은 모바일 화면 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .slack-sidebar {
+    padding: 10px;
+  }
+
+  .slack-messages {
+    padding: 10px;
+  }
+
+  .slack-footer {
+    padding: 10px;
+  }
+
+  #message-input {
+    margin-right: 8px;
+  }
+
+  #send-button {
+    padding: 8px 12px;
+  }
+}

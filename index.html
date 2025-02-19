@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESTTT</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome CDN 추가 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- 모바일 메뉴 토글 버튼 추가 -->
+  <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="slack-container">
+    <!-- Sidebar -->
+    <aside class="slack-sidebar" id="slack-sidebar">
+      <!-- 모바일 사이드바 헤더에 닫기 버튼 추가 -->
+      <div class="mobile-sidebar-header">
+        <button class="mobile-close-btn" id="mobile-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="slack-team-header">
+        <span class="team-name">My Workspace</span>
+        <button class="add-channel-btn">+</button>
+      </div>
+
+      <div class="slack-channels">
+        <div class="channel-category">
+          <span>Channels</span>
+          <button class="add-channel-btn">+</button>
+        </div>
+        <ul class="channel-list">
+          <li><a href="#" data-channel="general"># general</a></li>
+          <li><a href="#" data-channel="random"># random</a></li>
+          <li><a href="#" data-channel="project-alpha"># project-alpha</a></li>
+          <li><a href="#" data-channel="gpt"># gpt</a></li>
+        </ul>
+      </div>
+
+      <div class="slack-direct-messages">
+        <div class="dm-category">
+          <span>Direct Messages</span>
+          <button class="add-dm-btn">+</button>
+        </div>
+        <ul class="dm-list">
+          <li><a href="#" data-user="user1">User 1</a></li>
+          <li><a href="#" data-user="user2">User 2</a></li>
+          <li><a href="#" data-user="user3">User 3</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="slack-main">
+      <header class="slack-header">
+        <div class="channel-info">
+          <div class="channel-title"># general</div>
+          <div class="channel-details">
+            <span class="member-count"><i class="fas fa-user"></i> 3</span>
+            <span class="channel-description">This is a general discussion channel</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="slack-messages" id="slack-messages">
+        <div class="message">
+          <div class="message-profile">
+            <!-- <img src="https://via.placeholder.com/36" alt="profile" class="profile-image"> -->
+          </div>
+          <div class="message-content">
+            <div class="message-header">
+              <!-- <span class="message-user">User1</span>
+              <span class="message-time">11:30 AM</span> -->
+            </div>
+            <!-- <div class="message-text">Hello, world!</div> -->
+          </div>
+        </div>
+      </div>
+
+      <footer class="slack-footer">
+        <input type="text" id="message-input" placeholder="Message">
+        <button id="send-button">Send</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
